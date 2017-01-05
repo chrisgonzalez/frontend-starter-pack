@@ -30,5 +30,5 @@ _ReSharper*/
 node_modules/*
 */node_modules/*
 dist/*
-js/visualization.bundle.js
+js/*.bundle.js
 css/styles.css
