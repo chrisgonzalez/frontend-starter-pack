@@ -1,0 +1,48 @@
+{
+  "name": "dataviz-starter-pack",
+  "version": "1.0.0",
+  "description": "Starter pack for data viz experiments using d3 and es6.",
+  "main": "index.js",
+  "scripts": {
+    "postcss-watch": "./node_modules/.bin/postcss --watch --use postcss-cssnext --use postcss-nested css/styles.clean.css --output css/styles.css",
+    "postcss-build": "./node_modules/.bin/postcss --use postcss-cssnext --use postcss-nested css/styles.clean.css --output css/styles.css",
+    "start": "parallelshell 'webpack --watch' 'npm run postcss-watch' 'serve --cors'",
+    "makebuilddirectories": "rm -rf dist; mkdir dist; cp index.html dist/index.html; mkdir dist/js; mkdir dist/css;",
+    "uglify": "uglifyjs js/visualization.bundle.js --compress --mangle --output dist/js/visualization.bundle.js",
+    "minifycss": "minify --output dist/css/styles.css css/styles.css",
+    "build": "webpack; npm run postcss-build; npm run makebuilddirectories; npm run uglify; npm run minifycss"
+  },
+  "author": "Chris Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^4.3.0",
+    "es5-shim": "^4.5.9",
+    "es6-promise": "^4.0.5",
+    "lodash": "^4.17.2",
+    "node-fetch": "^1.6.3",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "minifier": "^0.8.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-nested": "^1.0.0",
+    "serve": "^1.4.0",
+    "style-loader": "^0.13.1",
+    "uglify-js": "^2.7.5",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.2"
+  }
+}
