@@ -8,9 +8,9 @@
     "postcss-build": "./node_modules/.bin/postcss --use postcss-cssnext --use postcss-nested css/styles.clean.css --output css/styles.css",
     "start": "parallelshell 'webpack --watch' 'npm run postcss-watch' 'serve --cors'",
     "makebuilddirectories": "rm -rf dist; mkdir dist; cp index.html dist/index.html; mkdir dist/js; mkdir dist/css;",
-    "uglify": "uglifyjs js/visualization.bundle.js --compress --mangle --output dist/js/visualization.bundle.js",
+    "uglify": "uglifyjs js/main.bundle.js --compress --mangle --output dist/js/main.bundle.js",
     "minifycss": "minify --output dist/css/styles.css css/styles.css",
-    "build": "webpack; npm run postcss-build; npm run makebuilddirectories; npm run uglify; npm run minifycss"
+    "build": "npm run makebuilddirectories; NODE_ENV=production webpack -p; npm run postcss-build; npm run minifycss"
   },
   "author": "Chris Gonzalez",
   "license": "ISC",
@@ -39,6 +39,6 @@
     "serve": "^1.4.0",
     "style-loader": "^0.13.1",
     "uglify-js": "^2.7.5",
-    "webpack": "^1.13.3"
+    "webpack": "^2.2.0-rc.3"
   }
 }
