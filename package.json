@@ -1,7 +1,7 @@
 {
-  "name": "dataviz-starter-pack",
+  "name": "frontend-starter-pack",
   "version": "1.0.0",
-  "description": "Starter pack for data viz experiments using d3 and es6.",
+  "description": "Starter pack for modern front-end experiements. Handles es6 and postCSS automagically!",
   "main": "index.js",
   "scripts": {
     "postcss-watch": "./node_modules/.bin/postcss --watch --use postcss-cssnext --use postcss-nested css/styles.clean.css --output css/styles.css",
@@ -15,7 +15,6 @@
   "author": "Chris Gonzalez",
   "license": "ISC",
   "dependencies": {
-    "d3": "^4.3.0",
     "es5-shim": "^4.5.9",
     "es6-promise": "^4.0.5",
     "lodash": "^4.17.2",
@@ -40,9 +39,6 @@
     "serve": "^1.4.0",
     "style-loader": "^0.13.1",
     "uglify-js": "^2.7.5",
-    "webpack": "^1.13.3",
-    "webpack-dev-middleware": "^1.8.4",
-    "webpack-dev-server": "^1.16.2",
-    "webpack-hot-middleware": "^2.13.2"
+    "webpack": "^1.13.3"
   }
 }
