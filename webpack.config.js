@@ -3,12 +3,12 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        visualization: [
+        main: [
             // polyfills
             'whatwg-fetch',
             'es5-shim',
             'es6-promise',
-            path.join(__dirname, 'js/visualization.js')
+            path.join(__dirname, 'js/main.js')
         ]
     },
 
