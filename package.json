@@ -15,7 +15,6 @@
   "author": "Chris Gonzalez",
   "license": "ISC",
   "dependencies": {
-    "es5-shim": "^4.5.9",
     "es6-promise": "^4.0.5",
     "lodash": "^4.17.2",
     "node-fetch": "^1.6.3",

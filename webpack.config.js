@@ -7,7 +7,6 @@ module.exports = {
         main: [
             // polyfills
             'whatwg-fetch',
-            // 'es5-shim',
             'es6-promise',
             path.join(__dirname, 'js/main.js')
         ]
