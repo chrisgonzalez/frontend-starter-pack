@@ -1,2 +1,4 @@
 @import 'variables.css';
 @import 'resets.css';
+
+@import '../components/sample/style.css';
