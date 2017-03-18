@@ -1,4 +1,13 @@
 /* set your global CSS vars here */
 :root {
-
+    --whale: 3.5rem;
+    --dinosaur: 3rem;
+    --elk: 2rem;
+    --deer: 1.5rem;
+    --great-dane: 1.25rem;
+    --dog: 1rem;
+    --cat: .75rem;
+    --rabbit: .5rem;
+    --hamster: .25rem;
+    --shrew: .125rem;
 }

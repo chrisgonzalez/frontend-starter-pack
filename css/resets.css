@@ -1,0 +1,17 @@
+*, *:before, *:after {
+    -moz-box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 400;
+    font-size: var(--dog);
+    margin: 0;
+}
